@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.db2es.core.sync.mapper.SmallDataMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        t1.id as id,
+        t1.title as title,
+        t1.detail as detail,
+        t2.lang as lang
+    </sql>
+
+    <select id="getAllData" resultType="java.util.Map">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM small_data t1 WITH (NOLOCK)
+        INNER JOIN small_info t2
+        WITH (NOLOCK)
+        ON t1.id = t2.id
+    </select>
+
+    <select id="getAllDataCount" resultType="java.lang.Long">
+        SELECT count(1)
+        FROM small_data t1 WITH (NOLOCK)
+        INNER JOIN small_info t2
+        WITH (NOLOCK)
+        ON t1.id = t2.id
+    </select>
+
+    <select id="getMaxUpdatedTime" resultType="java.lang.String">
+        SELECT max(t2.updated_date)
+        FROM small_data t1 WITH (NOLOCK)
+        INNER JOIN small_info t2
+        WITH (NOLOCK)
+        ON t1.id = t2.id
+    </select>
+
+    <select id="getAddByTime" resultType="java.util.Map">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM small_data t1 WITH (NOLOCK)
+        INNER JOIN small_info t2
+        WITH (NOLOCK)
+        ON t1.id = t2.id
+        AND t2.updated_date >= #{updatedTime}
+    </select>
+
+    <select id="getAddByIds" resultType="java.util.Map">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM small_data t1 WITH (NOLOCK)
+        INNER JOIN small_info t2
+        WITH (NOLOCK)
+        ON t1.id = t2.id
+        AND t1.id in
+        <foreach  item="item" collection="ids" index="index"  open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
+
+    <select id="getIds" resultType="java.lang.String">
+        SELECT t1.id
+        FROM small_data t1 WITH (NOLOCK)
+        INNER JOIN small_info t2
+        WITH (NOLOCK)
+        ON t1.id = t2.id
+    </select>
+</mapper>
+

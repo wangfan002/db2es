@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: db2es
+  profiles:
+    active: '@profileActive@'
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    servlet:
+      context-path: /
+    ssl:
+      enabled: false
+  endpoint:
+    health:
+      show-details: always
+

@@ -1,0 +1,41 @@
+{
+    "settings": {
+        "number_of_shards": 1,
+        "number_of_replicas": 0,
+        "refresh_interval": "-1",
+        "index.translog.durability" : "async",
+        "index.translog.flush_threshold_size" : "512mb",
+        "index.translog.sync_interval" : "15s",
+        "index.query.default_field": "timestamp",
+        "index.mapping.ignore_malformed": false,
+        "index.mapping.coerce": false,
+        "index.requests.cache.enable": true,
+        "index.search.slowlog.threshold.query.warn": "1s",
+        "index.search.slowlog.threshold.query.info": "500ms",
+        "index.search.slowlog.threshold.fetch.warn": "1s",
+        "index.search.slowlog.threshold.fetch.info": "500ms",
+        "index.indexing.slowlog.threshold.index.warn": "5s",
+        "index.indexing.slowlog.threshold.index.info": "3s",
+        "index.query.parse.allow_unmapped_fields": false
+    },
+    "mappings": {
+        "properties": {
+            "id": {
+                "type": "keyword"
+            },
+            "title" : {
+                "type" : "text",
+                "analyzer" : "ik_max_word",
+                "search_analyzer" : "ik_smart"
+            },
+            "detail" : {
+                "type" : "text",
+                "analyzer" : "ik_max_word",
+                "search_analyzer" : "ik_smart"
+            },
+            "lang": {
+                "type": "keyword"
+            }
+        }
+    }
+}

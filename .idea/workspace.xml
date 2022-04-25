@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="GROUP_BY_SEVERITY" value="true" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cf477cea-c4d7-4e40-a3c4-72d78b6b3b9c" name="Changes" comment="增量同步bug" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="UML Sequence" />
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="wk-sync-1.0" />
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="wk-sync-1.0" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="wk-sync-1.0" />
+                    <option name="lastUsedInstant" value="1650340301" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1650340275" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="wk-sync-0.1" />
+                    <option name="lastUsedInstant" value="1647574904" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/db2es/config/EsConfig.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/db2es/core/sync/enums/IndexEnum.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/db2es/core/sync/service/DataSyncHandler.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/db2es/util/DataCleanUtils.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/application-dev.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/application-prod.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/application-test.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/application.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/json/big_data.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-core/3.4.2/mybatis-plus-core-3.4.2.jar!/com/baomidou/mybatisplus/core/metadata/IPage.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.4.2/mybatis-plus-extension-3.4.2.jar!/com/baomidou/mybatisplus/extension/plugins/pagination/Page.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.4.2/mybatis-plus-extension-3.4.2.jar!/com/baomidou/mybatisplus/extension/service/IService.class" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../CodeWork/apache-maven-3.6.3" />
+        <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="D:\CodeWork\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="20zlImTLXTBFO39AhmamrREXyLw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "WebServerToolWindowFactoryState": "false",
+    "com.obroom.plugin.mybatislog.indexNum": "6",
+    "last_opened_file_path": "D:/IdeaWork/Study/db2es",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "6cc5cf95ed5a95cd9563e054f2d91367",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
+      "TSQL"
+    ]
+  }
+}]]></component>
+  <component name="ReaderModeSettings">
+    <option name="enabled" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.wk.sync.core.sync.exception.test" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IdeaWork\WoltersKluwer\wk-sync\src\main\resources\json" />
+      <recent name="D:\IdeaWork\WoltersKluwer\wk-sync\src\main\resources\mapper\sqlserver" />
+      <recent name="D:\IdeaWork\WoltersKluwer\wk-sync\src\main\java\com\wk\sync" />
+      <recent name="D:\IdeaWork\WoltersKluwer\wk-sync\src\main\resources" />
+      <recent name="D:\IdeaWork\WoltersKluwer\wk-sync\src\main\resources\init-sql" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IdeaWork\WoltersKluwer\wk-sync\src\main\resources\mapper\mysql" />
+      <recent name="D:\IdeaWork\WoltersKluwer\wk-sync\src\main\resources\mapper\sqlserver" />
+      <recent name="D:\IdeaWork\WoltersKluwer\wk-sync" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.wk.sync" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.wk.sync.core.sync.service.impl" />
+      <recent name="com.wk.sync.util" />
+      <recent name="com.wk.sync.component" />
+      <recent name="com.wk.sync.core.sync.service" />
+      <recent name="com.wk.sync.core.sync.enums" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.wk.sync.core.sync.service.impl" />
+      <recent name="com.wk.sync.core.sync.mapper" />
+      <recent name="com.wk.sync.util" />
+      <recent name="com.wk.sync.core.sync.service" />
+      <recent name="com.wk.sync.task.service" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SyncApplication">
+    <configuration name="DataCleanUtilsTest.klandCustom" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="db2es" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wk.sync.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.wk.sync.util" />
+      <option name="MAIN_CLASS_NAME" value="com.wk.sync.util.DataCleanUtilsTest" />
+      <option name="METHOD_NAME" value="klandCustom" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataCleanUtilsTest.strToOneExpandArr" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="db2es" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wk.sync.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.wk.sync.util" />
+      <option name="MAIN_CLASS_NAME" value="com.wk.sync.util.DataCleanUtilsTest" />
+      <option name="METHOD_NAME" value="strToOneExpandArr" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EsServiceTest.GetIndexByPrefix" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="db2es" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wk.sync.core.sync.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.wk.sync.core.sync.service" />
+      <option name="MAIN_CLASS_NAME" value="com.wk.sync.core.sync.service.EsServiceTest" />
+      <option name="METHOD_NAME" value="GetIndexByPrefix" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EsServiceTest.GetIndexesByPrefix" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="db2es" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wk.sync.core.sync.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.wk.sync.core.sync.service" />
+      <option name="MAIN_CLASS_NAME" value="com.wk.sync.core.sync.service.EsServiceTest" />
+      <option name="METHOD_NAME" value="GetIndexesByPrefix" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EsServiceTest.getAllUserIndex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="db2es" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wk.sync.core.sync.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.wk.sync.core.sync.service" />
+      <option name="MAIN_CLASS_NAME" value="com.wk.sync.core.sync.service.EsServiceTest" />
+      <option name="METHOD_NAME" value="getAllUserIndex" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="db2es" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="db2es" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SyncApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="db2es" />
+      <projectPathOnTarget name="projectPathOnTarget" value="/root/wk-sync" />
+      <target name="@@@LOCAL@@@" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.db2es.SyncApplication" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.EsServiceTest.GetIndexByPrefix" />
+      <item itemvalue="JUnit.EsServiceTest.GetIndexesByPrefix" />
+      <item itemvalue="JUnit.EsServiceTest.getAllUserIndex" />
+      <item itemvalue="JUnit.DataCleanUtilsTest.strToOneExpandArr" />
+      <item itemvalue="JUnit.DataCleanUtilsTest.klandCustom" />
+      <item itemvalue="Spring Boot.SyncApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.EsServiceTest.GetIndexesByPrefix" />
+        <item itemvalue="JUnit.EsServiceTest.GetIndexByPrefix" />
+        <item itemvalue="JUnit.EsServiceTest.getAllUserIndex" />
+        <item itemvalue="JUnit.DataCleanUtilsTest.strToOneExpandArr" />
+        <item itemvalue="JUnit.DataCleanUtilsTest.klandCustom" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBootOptions">
+    <option name="showAdditionalConfigNotification" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cf477cea-c4d7-4e40-a3c4-72d78b6b3b9c" name="Changes" comment="" />
+      <created>1637055221566</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1637055221566</updated>
+      <workItem from="1637055223144" duration="1959000" />
+      <workItem from="1637140599962" duration="22000" />
+      <workItem from="1637204993142" duration="16269000" />
+      <workItem from="1637283214570" duration="21559000" />
+      <workItem from="1637316599024" duration="602000" />
+      <workItem from="1637470507812" duration="4444000" />
+      <workItem from="1637545103573" duration="21475000" />
+      <workItem from="1637632255125" duration="21860000" />
+      <workItem from="1637718084729" duration="124000" />
+      <workItem from="1637718363731" duration="1675000" />
+      <workItem from="1637720078705" duration="588000" />
+      <workItem from="1637720693509" duration="22558000" />
+      <workItem from="1637805247282" duration="22905000" />
+      <workItem from="1637916825751" duration="2537000" />
+      <workItem from="1637925961210" duration="951000" />
+      <workItem from="1638149376047" duration="14003000" />
+      <workItem from="1638172075770" duration="3401000" />
+      <workItem from="1638237523315" duration="8587000" />
+      <workItem from="1638327788170" duration="4063000" />
+      <workItem from="1638343559039" duration="360000" />
+      <workItem from="1638344331933" duration="7448000" />
+      <workItem from="1638409353489" duration="21324000" />
+      <workItem from="1638496279702" duration="2635000" />
+      <workItem from="1638500164119" duration="26219000" />
+      <workItem from="1638624114291" duration="1021000" />
+      <workItem from="1638692803328" duration="1985000" />
+      <workItem from="1638841320184" duration="19894000" />
+      <workItem from="1638927723951" duration="25990000" />
+      <workItem from="1639014346505" duration="8773000" />
+      <workItem from="1639023216830" duration="17134000" />
+      <workItem from="1639097849897" duration="7650000" />
+      <workItem from="1639115544103" duration="68000" />
+      <workItem from="1639225850273" duration="347000" />
+      <workItem from="1639381870778" duration="655000" />
+      <workItem from="1639450429408" duration="4774000" />
+      <workItem from="1639455665995" duration="13112000" />
+      <workItem from="1639533137924" duration="3772000" />
+      <workItem from="1639618999543" duration="8782000" />
+      <workItem from="1639730559120" duration="2772000" />
+      <workItem from="1640050802276" duration="17932000" />
+      <workItem from="1640137122681" duration="5774000" />
+      <workItem from="1640225130390" duration="16352000" />
+      <workItem from="1640324368323" duration="2124000" />
+      <workItem from="1640426445271" duration="2080000" />
+      <workItem from="1640569195698" duration="22134000" />
+      <workItem from="1640656059498" duration="7898000" />
+      <workItem from="1640681357976" duration="1254000" />
+      <workItem from="1640741772066" duration="406000" />
+      <workItem from="1640742728610" duration="10044000" />
+      <workItem from="1641261496974" duration="8117000" />
+      <workItem from="1641284676862" duration="80000" />
+      <workItem from="1641284790544" duration="681000" />
+      <workItem from="1641285519337" duration="1189000" />
+      <workItem from="1641286754383" duration="18000" />
+      <workItem from="1641286810661" duration="3604000" />
+      <workItem from="1641346941483" duration="22961000" />
+      <workItem from="1641433540872" duration="17684000" />
+      <workItem from="1641520661938" duration="19681000" />
+      <workItem from="1641779849852" duration="24028000" />
+      <workItem from="1641951966479" duration="11075000" />
+      <workItem from="1641968610334" duration="12370000" />
+      <workItem from="1642037785461" duration="12603000" />
+      <workItem from="1642124833561" duration="21981000" />
+      <workItem from="1642469794436" duration="18677000" />
+      <workItem from="1642556974879" duration="18212000" />
+      <workItem from="1642642720311" duration="7473000" />
+      <workItem from="1642728697108" duration="5901000" />
+      <workItem from="1643079926876" duration="14396000" />
+      <workItem from="1643161496125" duration="16624000" />
+      <workItem from="1643248933524" duration="17340000" />
+      <workItem from="1643330853855" duration="12414000" />
+      <workItem from="1643415185487" duration="1870000" />
+      <workItem from="1643462843203" duration="1839000" />
+      <workItem from="1643532311519" duration="5379000" />
+      <workItem from="1643627525674" duration="576000" />
+      <workItem from="1643628121266" duration="224000" />
+      <workItem from="1643694190398" duration="4511000" />
+      <workItem from="1644457046629" duration="24889000" />
+      <workItem from="1644634889517" duration="40344000" />
+      <workItem from="1644889201785" duration="17623000" />
+      <workItem from="1644919675526" duration="164000" />
+      <workItem from="1644975882779" duration="10815000" />
+      <workItem from="1645062985062" duration="23189000" />
+      <workItem from="1645412585559" duration="7491000" />
+      <workItem from="1645494148901" duration="8183000" />
+      <workItem from="1645580633716" duration="9915000" />
+      <workItem from="1645685064055" duration="2694000" />
+      <workItem from="1645707517174" duration="951000" />
+      <workItem from="1646010567530" duration="13075000" />
+      <workItem from="1646098738704" duration="17144000" />
+      <workItem from="1646185866165" duration="6681000" />
+      <workItem from="1646271780123" duration="8454000" />
+      <workItem from="1646357537632" duration="37919000" />
+      <workItem from="1646703530602" duration="13358000" />
+      <workItem from="1646789796992" duration="27537000" />
+      <workItem from="1646881739983" duration="136000" />
+      <workItem from="1646882093709" duration="123000" />
+      <workItem from="1646882874098" duration="489000" />
+      <workItem from="1646883583780" duration="2555000" />
+      <workItem from="1646891125269" duration="7180000" />
+      <workItem from="1646961236105" duration="72525000" />
+      <workItem from="1647434398962" duration="62654000" />
+      <workItem from="1647737103206" duration="11828000" />
+      <workItem from="1647787400559" duration="61000" />
+      <workItem from="1647787542502" duration="30802000" />
+      <workItem from="1647995246247" duration="29620000" />
+      <workItem from="1648170554382" duration="22449000" />
+      <workItem from="1648453626760" duration="862000" />
+      <workItem from="1648454950680" duration="961000" />
+      <workItem from="1648470722712" duration="1257000" />
+      <workItem from="1648518805731" duration="14571000" />
+      <workItem from="1648542338137" duration="3959000" />
+      <workItem from="1648564086417" duration="391000" />
+      <workItem from="1648605068196" duration="9656000" />
+      <workItem from="1648691535144" duration="20581000" />
+      <workItem from="1648736807400" duration="2572000" />
+      <workItem from="1648776205758" duration="13132000" />
+      <workItem from="1648818483141" duration="22120000" />
+      <workItem from="1649296609238" duration="16666000" />
+      <workItem from="1649381260140" duration="1773000" />
+      <workItem from="1649383062462" duration="4875000" />
+      <workItem from="1649561444529" duration="1194000" />
+      <workItem from="1649571678436" duration="9271000" />
+      <workItem from="1649646388648" duration="15241000" />
+      <workItem from="1649728015335" duration="7534000" />
+      <workItem from="1649736302507" duration="14735000" />
+      <workItem from="1649820762723" duration="18613000" />
+      <workItem from="1649900997236" duration="11592000" />
+      <workItem from="1649920379093" duration="10068000" />
+      <workItem from="1649931121108" duration="261000" />
+      <workItem from="1649946943910" duration="54566000" />
+      <workItem from="1650333329939" duration="6244000" />
+      <workItem from="1650339636933" duration="18060000" />
+      <workItem from="1650373764715" duration="26008000" />
+      <workItem from="1650506508876" duration="7333000" />
+      <workItem from="1650592707677" duration="12248000" />
+      <workItem from="1650789553474" duration="223000" />
+      <workItem from="1650789823636" duration="15416000" />
+    </task>
+    <task id="LOCAL-00410" summary="司法大数据">
+      <created>1650012385919</created>
+      <option name="number" value="00410" />
+      <option name="presentableId" value="LOCAL-00410" />
+      <option name="project" value="LOCAL" />
+      <updated>1650012385919</updated>
+    </task>
+    <task id="LOCAL-00411" summary="内训助手">
+      <created>1650016271277</created>
+      <option name="number" value="00411" />
+      <option name="presentableId" value="LOCAL-00411" />
+      <option name="project" value="LOCAL" />
+      <updated>1650016271277</updated>
+    </task>
+    <task id="LOCAL-00412" summary="司法大数据">
+      <created>1650023750575</created>
+      <option name="number" value="00412" />
+      <option name="presentableId" value="LOCAL-00412" />
+      <option name="project" value="LOCAL" />
+      <updated>1650023750575</updated>
+    </task>
+    <task id="LOCAL-00413" summary="案例清洗增加">
+      <created>1650028248611</created>
+      <option name="number" value="00413" />
+      <option name="presentableId" value="LOCAL-00413" />
+      <option name="project" value="LOCAL" />
+      <updated>1650028248611</updated>
+    </task>
+    <task id="LOCAL-00414" summary="案例清洗增加">
+      <created>1650033587596</created>
+      <option name="number" value="00414" />
+      <option name="presentableId" value="LOCAL-00414" />
+      <option name="project" value="LOCAL" />
+      <updated>1650033587596</updated>
+    </task>
+    <task id="LOCAL-00415" summary="案例清洗增加">
+      <created>1650034883777</created>
+      <option name="number" value="00415" />
+      <option name="presentableId" value="LOCAL-00415" />
+      <option name="project" value="LOCAL" />
+      <updated>1650034883777</updated>
+    </task>
+    <task id="LOCAL-00416" summary="案例清洗增加">
+      <created>1650034980820</created>
+      <option name="number" value="00416" />
+      <option name="presentableId" value="LOCAL-00416" />
+      <option name="project" value="LOCAL" />
+      <updated>1650034980820</updated>
+    </task>
+    <task id="LOCAL-00417" summary="行政监管">
+      <created>1650247865771</created>
+      <option name="number" value="00417" />
+      <option name="presentableId" value="LOCAL-00417" />
+      <option name="project" value="LOCAL" />
+      <updated>1650247865771</updated>
+    </task>
+    <task id="LOCAL-00418" summary="行政监管">
+      <created>1650249027602</created>
+      <option name="number" value="00418" />
+      <option name="presentableId" value="LOCAL-00418" />
+      <option name="project" value="LOCAL" />
+      <updated>1650249027602</updated>
+    </task>
+    <task id="LOCAL-00419" summary="仲裁规则">
+      <created>1650250693156</created>
+      <option name="number" value="00419" />
+      <option name="presentableId" value="LOCAL-00419" />
+      <option name="project" value="LOCAL" />
+      <updated>1650250693156</updated>
+    </task>
+    <task id="LOCAL-00420" summary="仲裁规则">
+      <created>1650250772661</created>
+      <option name="number" value="00420" />
+      <option name="presentableId" value="LOCAL-00420" />
+      <option name="project" value="LOCAL" />
+      <updated>1650250772661</updated>
+    </task>
+    <task id="LOCAL-00421" summary="仲裁视野">
+      <created>1650262990199</created>
+      <option name="number" value="00421" />
+      <option name="presentableId" value="LOCAL-00421" />
+      <option name="project" value="LOCAL" />
+      <updated>1650262990199</updated>
+    </task>
+    <task id="LOCAL-00422" summary="专题聚集">
+      <created>1650263155265</created>
+      <option name="number" value="00422" />
+      <option name="presentableId" value="LOCAL-00422" />
+      <option name="project" value="LOCAL" />
+      <updated>1650263155265</updated>
+    </task>
+    <task id="LOCAL-00423" summary="专题聚集">
+      <created>1650267495446</created>
+      <option name="number" value="00423" />
+      <option name="presentableId" value="LOCAL-00423" />
+      <option name="project" value="LOCAL" />
+      <updated>1650267495446</updated>
+    </task>
+    <task id="LOCAL-00424" summary="行政处罚">
+      <created>1650272810224</created>
+      <option name="number" value="00424" />
+      <option name="presentableId" value="LOCAL-00424" />
+      <option name="project" value="LOCAL" />
+      <updated>1650272810224</updated>
+    </task>
+    <task id="LOCAL-00425" summary="要案头条">
+      <created>1650273680490</created>
+      <option name="number" value="00425" />
+      <option name="presentableId" value="LOCAL-00425" />
+      <option name="project" value="LOCAL" />
+      <updated>1650273680490</updated>
+    </task>
+    <task id="LOCAL-00426" summary="清洗逻辑修改">
+      <created>1650275503689</created>
+      <option name="number" value="00426" />
+      <option name="presentableId" value="LOCAL-00426" />
+      <option name="project" value="LOCAL" />
+      <updated>1650275503689</updated>
+    </task>
+    <task id="LOCAL-00427" summary="清洗逻辑修改">
+      <created>1650337067615</created>
+      <option name="number" value="00427" />
+      <option name="presentableId" value="LOCAL-00427" />
+      <option name="project" value="LOCAL" />
+      <updated>1650337067616</updated>
+    </task>
+    <task id="LOCAL-00428" summary="清洗逻辑修改">
+      <created>1650338473252</created>
+      <option name="number" value="00428" />
+      <option name="presentableId" value="LOCAL-00428" />
+      <option name="project" value="LOCAL" />
+      <updated>1650338473252</updated>
+    </task>
+    <task id="LOCAL-00429" summary="清洗逻辑修改">
+      <created>1650340262912</created>
+      <option name="number" value="00429" />
+      <option name="presentableId" value="LOCAL-00429" />
+      <option name="project" value="LOCAL" />
+      <updated>1650340262912</updated>
+    </task>
+    <task id="LOCAL-00430" summary="协会-北京">
+      <created>1650342222408</created>
+      <option name="number" value="00430" />
+      <option name="presentableId" value="LOCAL-00430" />
+      <option name="project" value="LOCAL" />
+      <updated>1650342222408</updated>
+    </task>
+    <task id="LOCAL-00431" summary="更改集群目标">
+      <created>1650350444893</created>
+      <option name="number" value="00431" />
+      <option name="presentableId" value="LOCAL-00431" />
+      <option name="project" value="LOCAL" />
+      <updated>1650350444893</updated>
+    </task>
+    <task id="LOCAL-00432" summary="协会-上海">
+      <created>1650353223860</created>
+      <option name="number" value="00432" />
+      <option name="presentableId" value="LOCAL-00432" />
+      <option name="project" value="LOCAL" />
+      <updated>1650353223860</updated>
+    </task>
+    <task id="LOCAL-00433" summary="清洗逻辑修改">
+      <created>1650354961420</created>
+      <option name="number" value="00433" />
+      <option name="presentableId" value="LOCAL-00433" />
+      <option name="project" value="LOCAL" />
+      <updated>1650354961420</updated>
+    </task>
+    <task id="LOCAL-00434" summary="清单助手">
+      <created>1650355764502</created>
+      <option name="number" value="00434" />
+      <option name="presentableId" value="LOCAL-00434" />
+      <option name="project" value="LOCAL" />
+      <updated>1650355764503</updated>
+    </task>
+    <task id="LOCAL-00435" summary="清洗逻辑修改">
+      <created>1650363084191</created>
+      <option name="number" value="00435" />
+      <option name="presentableId" value="LOCAL-00435" />
+      <option name="project" value="LOCAL" />
+      <updated>1650363084191</updated>
+    </task>
+    <task id="LOCAL-00436" summary="清洗逻辑修改">
+      <created>1650364461190</created>
+      <option name="number" value="00436" />
+      <option name="presentableId" value="LOCAL-00436" />
+      <option name="project" value="LOCAL" />
+      <updated>1650364461190</updated>
+    </task>
+    <task id="LOCAL-00437" summary="清洗逻辑修改">
+      <created>1650419876387</created>
+      <option name="number" value="00437" />
+      <option name="presentableId" value="LOCAL-00437" />
+      <option name="project" value="LOCAL" />
+      <updated>1650419876388</updated>
+    </task>
+    <task id="LOCAL-00438" summary="清洗逻辑修改">
+      <created>1650420268845</created>
+      <option name="number" value="00438" />
+      <option name="presentableId" value="LOCAL-00438" />
+      <option name="project" value="LOCAL" />
+      <updated>1650420268845</updated>
+    </task>
+    <task id="LOCAL-00439" summary="清洗逻辑修改">
+      <created>1650420323326</created>
+      <option name="number" value="00439" />
+      <option name="presentableId" value="LOCAL-00439" />
+      <option name="project" value="LOCAL" />
+      <updated>1650420323326</updated>
+    </task>
+    <task id="LOCAL-00440" summary="同步多个索引接口">
+      <created>1650420978062</created>
+      <option name="number" value="00440" />
+      <option name="presentableId" value="LOCAL-00440" />
+      <option name="project" value="LOCAL" />
+      <updated>1650420978062</updated>
+    </task>
+    <task id="LOCAL-00441" summary="根据前缀删除索引接口">
+      <created>1650433841426</created>
+      <option name="number" value="00441" />
+      <option name="presentableId" value="LOCAL-00441" />
+      <option name="project" value="LOCAL" />
+      <updated>1650433841426</updated>
+    </task>
+    <task id="LOCAL-00442" summary="根据前缀删除索引接口">
+      <created>1650433958345</created>
+      <option name="number" value="00442" />
+      <option name="presentableId" value="LOCAL-00442" />
+      <option name="project" value="LOCAL" />
+      <updated>1650433958345</updated>
+    </task>
+    <task id="LOCAL-00443" summary="一键查询所有未创建索引">
+      <created>1650435106898</created>
+      <option name="number" value="00443" />
+      <option name="presentableId" value="LOCAL-00443" />
+      <option name="project" value="LOCAL" />
+      <updated>1650435106898</updated>
+    </task>
+    <task id="LOCAL-00444" summary="索引字段修改">
+      <created>1650435853689</created>
+      <option name="number" value="00444" />
+      <option name="presentableId" value="LOCAL-00444" />
+      <option name="project" value="LOCAL" />
+      <updated>1650435853689</updated>
+    </task>
+    <task id="LOCAL-00445" summary="行政处罚地域">
+      <created>1650438866734</created>
+      <option name="number" value="00445" />
+      <option name="presentableId" value="LOCAL-00445" />
+      <option name="project" value="LOCAL" />
+      <updated>1650438866734</updated>
+    </task>
+    <task id="LOCAL-00446" summary="智能决策">
+      <created>1650442306757</created>
+      <option name="number" value="00446" />
+      <option name="presentableId" value="LOCAL-00446" />
+      <option name="project" value="LOCAL" />
+      <updated>1650442306757</updated>
+    </task>
+    <task id="LOCAL-00447" summary="庭审技巧">
+      <created>1650443289894</created>
+      <option name="number" value="00447" />
+      <option name="presentableId" value="LOCAL-00447" />
+      <option name="project" value="LOCAL" />
+      <updated>1650443289894</updated>
+    </task>
+    <task id="LOCAL-00448" summary="飞行检查">
+      <created>1650444663311</created>
+      <option name="number" value="00448" />
+      <option name="presentableId" value="LOCAL-00448" />
+      <option name="project" value="LOCAL" />
+      <updated>1650444663311</updated>
+    </task>
+    <task id="LOCAL-00449" summary="飞行检查">
+      <created>1650445302004</created>
+      <option name="number" value="00449" />
+      <option name="presentableId" value="LOCAL-00449" />
+      <option name="project" value="LOCAL" />
+      <updated>1650445302004</updated>
+    </task>
+    <task id="LOCAL-00450" summary="索引字段修改">
+      <created>1650506956460</created>
+      <option name="number" value="00450" />
+      <option name="presentableId" value="LOCAL-00450" />
+      <option name="project" value="LOCAL" />
+      <updated>1650506956461</updated>
+    </task>
+    <task id="LOCAL-00451" summary="索引字段修改">
+      <created>1650510788066</created>
+      <option name="number" value="00451" />
+      <option name="presentableId" value="LOCAL-00451" />
+      <option name="project" value="LOCAL" />
+      <updated>1650510788066</updated>
+    </task>
+    <task id="LOCAL-00452" summary="解读修改为idf">
+      <created>1650524809755</created>
+      <option name="number" value="00452" />
+      <option name="presentableId" value="LOCAL-00452" />
+      <option name="project" value="LOCAL" />
+      <updated>1650524809755</updated>
+    </task>
+    <task id="LOCAL-00453" summary="索引字段修改">
+      <created>1650593403062</created>
+      <option name="number" value="00453" />
+      <option name="presentableId" value="LOCAL-00453" />
+      <option name="project" value="LOCAL" />
+      <updated>1650593403063</updated>
+    </task>
+    <task id="LOCAL-00454" summary="索引字段修改">
+      <created>1650607768723</created>
+      <option name="number" value="00454" />
+      <option name="presentableId" value="LOCAL-00454" />
+      <option name="project" value="LOCAL" />
+      <updated>1650607768723</updated>
+    </task>
+    <task id="LOCAL-00455" summary="idf添加">
+      <created>1650608956784</created>
+      <option name="number" value="00455" />
+      <option name="presentableId" value="LOCAL-00455" />
+      <option name="project" value="LOCAL" />
+      <updated>1650608956784</updated>
+    </task>
+    <task id="LOCAL-00456" summary="添加默认relationArticleID">
+      <created>1650611946203</created>
+      <option name="number" value="00456" />
+      <option name="presentableId" value="LOCAL-00456" />
+      <option name="project" value="LOCAL" />
+      <updated>1650611946203</updated>
+    </task>
+    <task id="LOCAL-00457" summary="增量同步bug">
+      <created>1650762336600</created>
+      <option name="number" value="00457" />
+      <option name="presentableId" value="LOCAL-00457" />
+      <option name="project" value="LOCAL" />
+      <updated>1650762336600</updated>
+    </task>
+    <task id="LOCAL-00458" summary="增量同步bug">
+      <created>1650762608786</created>
+      <option name="number" value="00458" />
+      <option name="presentableId" value="LOCAL-00458" />
+      <option name="project" value="LOCAL" />
+      <updated>1650762608786</updated>
+    </task>
+    <option name="localTasksCounter" value="459" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="25b56e51-5e88-4135-86b6-f3ba36029d1a">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="685f497e-dab5-44c1-8b86-052493ce6761">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:D:/IdeaWork/WoltersKluwer/wk-sync/src/main/java/com/wk/sync/core/sync/service/impl" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="25b56e51-5e88-4135-86b6-f3ba36029d1a" value="TOOL_WINDOW" />
+        <entry key="685f497e-dab5-44c1-8b86-052493ce6761" value="TOOL_WINDOW" />
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="RELOAD_CONTEXT" value="false" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="司法大数据" />
+    <MESSAGE value="案例清洗增加" />
+    <MESSAGE value="行政监管" />
+    <MESSAGE value="仲裁规则" />
+    <MESSAGE value="仲裁视野" />
+    <MESSAGE value="专题聚集" />
+    <MESSAGE value="行政处罚" />
+    <MESSAGE value="要案头条" />
+    <MESSAGE value="协会-北京" />
+    <MESSAGE value="更改集群目标" />
+    <MESSAGE value="协会-上海" />
+    <MESSAGE value="清单助手" />
+    <MESSAGE value="清洗逻辑修改" />
+    <MESSAGE value="同步多个索引接口" />
+    <MESSAGE value="根据前缀删除索引接口" />
+    <MESSAGE value="一键查询所有未创建索引" />
+    <MESSAGE value="行政处罚地域" />
+    <MESSAGE value="智能决策" />
+    <MESSAGE value="庭审技巧" />
+    <MESSAGE value="飞行检查" />
+    <MESSAGE value="解读修改为idf" />
+    <MESSAGE value="索引字段修改" />
+    <MESSAGE value="idf添加" />
+    <MESSAGE value="添加默认relationArticleID" />
+    <MESSAGE value="增量同步bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="增量同步bug" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/db2es/core/sync/service/SyncService.java</url>
+          <line>265</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.util.concurrent.CompletableFuture" memberName="stack" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/wk_sync$SyncApplication.ic" NAME="SyncApplication Coverage Results" MODIFIED="1647580567343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>

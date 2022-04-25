@@ -1,0 +1,38 @@
+server:
+  port: 8888
+logging:
+  level:
+    com.db2es.core.mapper: debug
+elasticsearch:
+  thread: 7
+  cluster1-hosts: 172.31.18.197:9200
+  cluster1-username: elastic
+  cluster1-password: elastic
+  cluster2-hosts: 172.31.18.197:9200
+  cluster2-username: elastic
+  cluster2-password: elastic
+mail:
+  host: smtp.163.com
+  port: 25
+  from: xxx@163.com
+  user: xxx@163.com
+  pass: QWERTYUIOPASDFGH
+  to: wf710918@163.com
+spring:
+  datasource:
+    dynamic:
+      primary: master #设置默认的数据源或者数据源组,默认值即为master
+      strict: false
+      datasource:
+        master:
+          url: jdbc:sqlserver://localhost:1433;DatabaseName=index_sync;sendStringParametersAsUnicode=false;
+          username: admin
+          password: Qwer!234
+          driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+        mysql:
+          url: jdbc:mysql://localhost:3306/index_sync?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+          username: root
+          password: root
+          driver-class-name: com.mysql.cj.jdbc.Driver
+
+
