@@ -1,5 +1,5 @@
 ## db2es:1.0
-Sqlserver同步ES的Swagger版
+数据库同步ES的Swagger版
 
 
 ## 优点
