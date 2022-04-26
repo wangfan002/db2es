@@ -2,6 +2,10 @@
 数据库同步ES的Swagger版
 
 
+## 标签
+ElasticSearch7.10 ES 数据库 同步 mysql sqlserver 数据清洗 多线程 大数据量 全量 增量 定时
+
+
 ## 优点
 * 相比于logstash,支持对数据的真删除进行同步(基于触发器)
 * 对大数据量同步性能更出色,基于id或自增列进行多线程分批同步
@@ -39,7 +43,7 @@
 
 
 ## 技术架构
-springboot2 maven mybatis-plus mysql sqlserver logback es swagger
+springboot2 maven mybatis-plus mysql sqlserver logback ElasticSearch7.10 swagger2
 
 ## 联系我
 Fan.Wang@bjtu.edu.cn
