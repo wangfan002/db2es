@@ -1,9 +1,9 @@
 ## db2es:1.0
-数据库同步ES的Swagger版
+数据库同步ES的Swagger版(脚手架)
 
 
 ## 标签
-ElasticSearch7.10 ES 数据库 同步 mysql sqlserver 数据清洗 多线程 大数据量 全量 增量 定时
+ElasticSearch7.10 ES 数据库 同步 mysql sqlserver 数据清洗 多线程 大数据量 全量 增量 定时 脚手架
 
 
 ## 优点
