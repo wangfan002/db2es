@@ -15,6 +15,11 @@ ElasticSearch7.10 ES 数据库 同步 mysql sqlserver 数据清洗 多线程 大
 * 同步基于sql,支持mysql,sqlserver等关系型数据库
 * 支持多ES集群
 
+## DEMO
+* 例:同步大数据量数据  10W以上数据 --> 仿照BigData
+* 例:同步小数据量数据  10W以下数据 --> 仿照SmallData
+
+
 
 ## 接口展示
 ![](images/img_1.jpg)
@@ -29,7 +34,7 @@ ElasticSearch7.10 ES 数据库 同步 mysql sqlserver 数据清洗 多线程 大
 * 修改yml的Sqlserver连接信息并在sqlserver执行sqlserver_create.sql
   * trigger_deleted表 记录删除数据的信息
   * trigger_big_data_delete触发器 记录表big_data的删除操作到trigger_deleted表
-* 修改es连接信息 
+* 修改es连接信息
 * 运行项目启动类即可
 
 
