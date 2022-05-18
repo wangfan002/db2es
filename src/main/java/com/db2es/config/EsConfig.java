@@ -35,9 +35,6 @@ public class EsConfig {
     private String cluster2Username;
     private String cluster2Password;
 
-    private int maxConnTotal;
-    private int maxConnPerRoute;
-
     @Bean(name = "cluster1Client")
     public RestHighLevelClient cluster1Client() {
         return getRestHighLevelClient(cluster1Username, cluster1Password, cluster1Hosts);
