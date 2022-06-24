@@ -7,10 +7,9 @@ ElasticSearch7.10 ES 数据库 同步 mysql sqlserver 数据清洗 多线程 大
 
 
 ## 优点
-* 相比于logstash,支持对数据的真删除进行同步(基于CDC)
 * 对大数据量同步性能更出色,基于id或自增列进行多线程分批同步
 * 完全由java语言进行开发,数据清洗更为简单
-* 支持定时任务进行索引的增量同步
+* 基于Sqlserver日志的CDC增量同步
 * 支持同步完毕的邮件和钉钉通知
 * 同步基于sql,支持mysql,sqlserver等关系型数据库
 * 支持多ES集群
