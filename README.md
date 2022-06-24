@@ -25,18 +25,6 @@ ElasticSearch7.10 ES 数据库 同步 mysql sqlserver 数据清洗 多线程 大
 
 
 
-## 运行条件
-* 修改yml的mysql连接信息并在mysql创建数据库index_sync,执行src/main/resources/init-sql/mysql_create.sql
-  * index_cycle_info表 存储同步时间信息,以便查询增量数据
-  * task_job表 存储定时器任务信息
-  * task_record表 存储全量和增量索引任务状态信息
-* 修改yml的Sqlserver连接信息并在sqlserver执行sqlserver_create.sql
-  * trigger_deleted表 记录删除数据的信息
-  * trigger_big_data_delete触发器 记录表big_data的删除操作到trigger_deleted表
-* 修改es连接信息
-* 运行项目启动类即可
-
-
 
 ## 访问地址
 * dev
